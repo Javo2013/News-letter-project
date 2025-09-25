@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "categories"
+        "footer";
+    grid-template-rows: auto 1fr auto auto;
+    min-height: 100vh;
+}
+
+.site-header { grid-area: header; }
+.site-main   { grid-area: main; display: grid; grid-template-columns: 3fr 1fr; gap: 2rem; }
+.categories  { grid-area: categories; }
+.site-footer { grid-area: footer; }
